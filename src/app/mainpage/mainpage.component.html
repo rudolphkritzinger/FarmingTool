@@ -1,0 +1,74 @@
+<section class="hero is-primary is-bold
+ is-fullheight">
+  <div class="hero-body">
+  <div class="container has-text-centered">
+    <!-- tiles  go here -->
+    <div class="tile is-ancestor is-flex-wrap-wrap">
+
+     <!-- takes user to current crop page -->      
+      <div class = "tile is-6 is-parent">
+        <div class = "tile is-child box has-background-primary-light"> 
+        <div class="container py-6 my-6">
+        <img src="assets/img/Corn.png">
+        </div>
+        <div style ="text-align: center;">
+        <button class="button is-danger is-rounded is-large" [routerLink]="['/currentcrop']">Current Crop</button>       
+        </div>  
+        </div>
+      </div>
+
+      <div class = "tile is-vertical">
+        <div class = "tile">
+
+        <!-- takes user to settings crop page -->
+        <div class = "tile is-parent">
+          <div class = "tile is-child box has-background-primary-light">
+          <div class = "container py-6">
+          <img src="assets/img/Settings.png"> 
+          </div>    
+          <button class="button is-danger is-rounded is-large" [routerLink]="['/settings']">Settings</button>  
+          </div>
+          </div>
+
+          <!-- Shows users the notice board -->    
+          <div class = "tile is-parent">            
+          <div class = "tile is-child box has-background-primary-light">
+          <img src="assets/img/Exclamation.png">  
+          <button class="button is-danger is-rounded is-large " id="noticebutton">Notice!</button>
+          </div>
+          </div>      
+        </div>
+
+          <!-- Shows user the farm statistics --> 
+        <div class = "tile is-parent">
+          <div class = "tile is-child box has-background-primary-light">
+          <img src="assets/img/Graphs.png"> 
+          <div style="text-align: center;">
+          <button class="button is-danger is-rounded is-large ">Stats</button>
+          </div>
+          </div>  
+        </div>  
+      </div>   
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- Notice modal -->
+<div class="modal " id="notice-modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Notice</p>
+    </header>
+    <section class="modal-card-body">
+      <!-- Content ... -->
+      <div class="box">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </div>  
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button is-success" id="Noticedone">Done</button>
+    </footer>
+  </div>
+</div>

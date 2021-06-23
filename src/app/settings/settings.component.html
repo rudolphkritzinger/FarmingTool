@@ -1,0 +1,112 @@
+<section class="hero is-primary is-bold">
+    <div class="hero-body">
+    <div class="container">
+      <h1 class="title">Current Crop Settings</h1>
+    </div>
+    </div>
+    </section>  
+ 
+    <section class="section">
+    <div class="container">
+ 
+   <!-- settings form -->
+ 
+    <form (ngSubmit)="submitForm()" #settingsform="ngForm">
+    <div class="column is-3">
+ 
+   <!-- Active crop drop down-->
+ 
+    <div class="field">
+   <label class="label">Active crop</label>
+   <div class="control">
+     <div class="select">
+       <select>
+         <option>Select dropdown</option>
+         <option>Lettuce</option>
+         <option>Spinach</option>
+         <option>Basil</option>        
+       </select>
+     </div>
+   </div>
+  </div>
+ 
+   <!-- Crop life-stage drop down-->
+  
+ <div class="field">
+   <label class="label">Stage</label>
+   <div class="control">
+     <div class="select">
+       <select>
+         <option>Select dropdown</option>
+         <option>Seedling</option>
+         <option>Vegatative</option>
+         <option>Fruiting</option>
+       </select>
+     </div>
+   </div>
+ </div>
+ 
+    <!-- Required nutrients input -->
+ 
+    <div class="field">
+        <label class="label">Nutrients</label> 
+        <input type="text" 
+         name="Nutrients" 
+         class="input" 
+         [(ngModel)]="nutrients">
+      </div>  
+ 
+    <!-- feeding instructions input -->
+ 
+      <div class="field">
+        <label class="label">Instructions</label> 
+        <input type="text" 
+         name="Instructions" 
+         class="input" 
+         [(ngModel)]="instructions">
+      </div>  
+ 
+    <!-- Recommended temperature input -->
+ 
+      <div class="field">
+        <label class="label">Recommended temperature</label> 
+        <input type="text" 
+         name="RecommendedTemperature" 
+         class="input" 
+         [(ngModel)]="RecommendedTemperature">
+      </div>  
+ 
+    <!-- Recommended humidity input -->
+ 
+      <div class="field">
+        <label class="label">Recommended humidity</label> 
+        <input type="text" 
+         name="RecommendedHumidity" 
+         class="input" 
+         [(ngModel)]="RecommendedHumidity">
+      </div>  
+ 
+    <!-- Recommended ph input -->
+ 
+      <div class="field">
+        <label class="label">Recommended ph</label> 
+        <input type="text" 
+         name="RecommendedPh" 
+         class="input" 
+         [(ngModel)]="RecommendedPh">
+      </div>  
+ 
+        <!-- submit button -->
+      <button 
+    [routerLink]="['/main']"
+    type ="submit" 
+    class="button is-large is-warning"
+    [disabled]="settingsform.invalid">
+    Submit!
+ </button>
+ 
+      </div>
+   </form>
+ 
+   </div>  
+    </section> 

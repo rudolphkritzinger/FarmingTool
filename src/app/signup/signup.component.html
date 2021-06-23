@@ -1,0 +1,89 @@
+<section class="hero is-primary is-bold">
+    <div class="hero-body">
+    <div class="container">
+      <h1 class="title">Sign up here!</h1>
+    </div>
+    </div>
+    </section>  
+      
+    <section class="section">
+    <div class="container">
+ 
+   <!--sign up form goes here -->
+   <form (ngSubmit)="submitForm()" #signupform="ngForm">
+   <div class="column is-3">
+ 
+   <!-- firstname -->
+      <div class="field">
+        <label class="label">Full Name</label> 
+        <input 
+         type="text" 
+         name="Fullname"  
+         class="input" 
+         [(ngModel)]="fullname" 
+         #fullnameinput="ngModel"
+         required>
+        
+         <div class="help is-error" *ngIf="fullnameinput.invalid &&  fullnameinput.dirty">
+          Your name is required.
+         </div>
+ 
+      </div>  
+     
+   <!-- Department -->
+   <div class="field">
+        <label class="label">Department</label> 
+        <input type="text" 
+         name="department" 
+         class="input" 
+         [(ngModel)]="department"
+         #departmentinput="ngModel"
+         required>
+ 
+         <div class="help is-error" *ngIf="departmentinput.invalid &&  departmentinput.dirty">
+          Your name is required.
+         </div>
+  
+      </div>  
+   <!-- Username -->
+   <div class="field">
+        <label class="label">Email</label> 
+        <input type="text"
+         name="email" 
+         class="input" 
+         [(ngModel)]="email"
+         #usernameinput="ngModel"
+         required>
+ 
+         <div class="help is-error" *ngIf="usernameinput.invalid &&  usernameinput.dirty">
+          Your name is required.
+         </div>
+ 
+      </div>  
+   <!-- password -->
+   <div class="field">
+        <label class="label">Password</label> 
+        <input type="text" 
+         name="password" 
+         class="input" 
+         [(ngModel)]="password"
+         #passwordinput="ngModel"
+         required>
+ 
+         <div class="help is-error" *ngIf="passwordinput.invalid &&  fullnameinput.dirty">
+          Your name is required.
+         </div>
+ 
+      </div> 
+ 
+   <!-- submit button -->
+   <button 
+    type ="submit" 
+    class="button is-large is-warning"
+    [disabled]="signupform.invalid">
+    Submit!
+ </button>
+ </div>
+   </form>
+    </div>
+    </section>  
