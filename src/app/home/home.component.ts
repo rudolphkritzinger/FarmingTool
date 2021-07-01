@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
     const Cancelbutton = document.getElementById('logincancel');
     const Submitbutton = document.getElementById('loginsubmit');   
 
+
     Loginbutton?.addEventListener('click',()=>{
       modal?.classList.add('is-active');
      })

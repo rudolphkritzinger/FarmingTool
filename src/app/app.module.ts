@@ -10,6 +10,9 @@ import { HomeComponent } from './home/home.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { SettingsComponent } from './settings/settings.component';
 import { SignupComponent } from './signup/signup.component';
+import { GraphQLModule } from './graphql.module';
+import { HttpClientModule } from '@angular/common/http';
+import {APOLLO_OPTIONS} from 'apollo-angular';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,9 @@ import { SignupComponent } from './signup/signup.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    GraphQLModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

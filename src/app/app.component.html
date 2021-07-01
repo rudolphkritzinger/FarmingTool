@@ -1,3 +1,8 @@
 <app-header></app-header>
+<div class ="box"> 
+ <ul>
+      <li *ngFor="let plant of plants$ | async"> {{ plant.CropName}} </li>
+</ul>
+</div>
 <router-outlet></router-outlet>
 <app-footer></app-footer>

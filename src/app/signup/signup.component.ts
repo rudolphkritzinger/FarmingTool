@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {SharedService} from "../shared/shared.service"
 
 @Component({
   selector: 'app-signup',
@@ -11,9 +12,16 @@ export class SignupComponent implements OnInit {
   department!: string;
   username!: string;
   password!: string;
-  constructor() { }
+
+  message!: string;
+
+
+
+  constructor(private shared:SharedService) { }
 
   ngOnInit(): void {
+  this.message= this.shared.getMessage()
+
   }
 
   submitForm() {
