@@ -4,6 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "starter": "node index.js",
+    "server": "nodemon index.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
@@ -30,6 +32,8 @@
     "express": "^4.17.1",
     "graphql": "^15.5.1",
     "graphql-tag": "^2.12.5",
+    "nodemod": "^2.8.4",
+    "nodemon": "^2.0.9",
     "path": "^0.12.7",
     "rxjs": "~6.6.0",
     "tslib": "^2.1.0",
