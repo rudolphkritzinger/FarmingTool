@@ -12,7 +12,9 @@ import { SettingsComponent } from './settings/settings.component';
 import { SignupComponent } from './signup/signup.component';
 import { GraphQLModule } from './graphql.module';
 import { HttpClientModule } from '@angular/common/http';
-import {APOLLO_OPTIONS} from 'apollo-angular';
+import { AuthModule } from '@auth0/auth0-angular';
+import { environment as env} from 'src/environments/environment';
+import { LoginButtonComponent } from './login-button/login-button.component';
 
 @NgModule({
   declarations: [
@@ -23,14 +25,18 @@ import {APOLLO_OPTIONS} from 'apollo-angular';
     HomeComponent,
     MainpageComponent,
     SettingsComponent,
-    SignupComponent
+    SignupComponent,
+    LoginButtonComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     GraphQLModule,
-    HttpClientModule
+    HttpClientModule,
+    AuthModule.forRoot({
+      ... env.auth,
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
