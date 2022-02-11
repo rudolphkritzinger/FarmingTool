@@ -1,0 +1,5 @@
+query getplants {
+  PlantTypes {
+    cropname
+  }
+}

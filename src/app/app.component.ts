@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Apollo } from 'apollo-angular';
 import gql from 'graphql-tag';
+import { AuthService } from '@auth0/auth0-angular';
 
 
 interface Plant {
@@ -44,7 +45,7 @@ export class AppComponent implements OnInit{
 
   plants$!: Observable<Plant[]> ;
   
-  constructor(private apollo: Apollo){}
+  constructor(private apollo: Apollo, public auth:AuthService){}
 
   ngOnInit(): void{
     this.plants$ = this.apollo

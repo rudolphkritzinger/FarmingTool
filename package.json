@@ -4,11 +4,14 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "npm build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "generate-types": "graphql-codegen --config codegen.yml",
-    "generate": "graphql-codegen --config codegen.yml"
+    "generate": "graphql-codegen --config codegen.yml",
+    "clean": "rm -rf node_modules",
+    "reinstall": "npm run clean && npm install",
+    "rebuild": "npm run clean && npm install && npm run build"
   },
   "private": true,
   "dependencies": {
@@ -21,7 +24,7 @@
     "@angular/platform-browser-dynamic": "~12.0.5",
     "@angular/router": "~12.0.5",
     "@apollo/client": "^3.3.20",
-    "@auth0/auth0-angular": "^1.5.1",
+    "@auth0/auth0-angular": "^1.6.0",
     "apollo-angular": "^2.6.0",
     "apollo-link": "^1.2.14",
     "bulma": "^0.9.3",
